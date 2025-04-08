@@ -20,7 +20,7 @@ pipeline {
         success {
             echo "Successfully running"
         }
-        failed {
+        failure {
             echo "Failed running"
         }
         cleanup {
