@@ -7,9 +7,18 @@ pipeline {
     stages {
         stage("Hello") {
             steps {
-                echo "run stages Hello"
-                echo "Hello World"
-                echo "Hello Pipeline"
+                always {
+                    echo "Steps is running"
+                }
+                success {
+                    echo "Successfully running"
+                }
+                failed {
+                    echo "Failed running"
+                }
+                cleanup {
+                    echo "Cleaning up"
+                }
             }
         }
     }
